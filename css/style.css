@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes img-move {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* HEADER*/
+
+header a img {
+  border-radius: 50px;
+  margin: 0.5rem;
+}
+
+header {
+  background-color: #f4f6f8;
+  position: sticky;
+  padding: 1rem 0;
+  top: 0;
+  z-index: 1;
+}
+
+/* LISTA NAV */
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+}
+
+li:hover a {
+  text-decoration: none;
+  font-family: initial;
+  opacity: 0, 65;
+  color: rgb(82, 82, 151);
+}
+
+.navItem {
+  margin: 0 0 0 1.5rem;
+}
+/* FOOTER*/
+
+footer {
+  background-color: #f0f3f5;
+  padding-bottom: 1rem;
+}
+
+footer p {
+  color: gray;
+  border-bottom: 4px double rgb(177, 171, 171);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  padding-top: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+/* INDEX */
+
+h1 {
+  padding: 50px;
+  font-family: initial;
+  font-weight: normal;
+  font-size: 50px;
+  text-align: center;
+  color: grey;
+  letter-spacing: 1rem;
+  animation-duration: 3s;
+  animation-name: move;
+}
+
+.imgPortada {
+  max-width: 100%;
+  animation: img-move 1.5s ease;
+}
+
+/* CARDS */
+
+.card {
+  margin: 1rem;
+  max-width: 300px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(19, 17, 17, 0.45);
+}
+
+.card__image {
+  height: 10rem;
+}
+
+.indexH2 {
+  text-align: center;
+  font-family: initial;
+  font-weight: normal;
+  color: #858582;
+  padding-top: 1rem;
+}
+
+/* ROW */
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  max-width: 100%;
+}
+
+/* CONTEINER */
+
+.conteiner {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* SECTION NOSOTROS */
+
+.cardNosotros {
+  margin: 1rem;
+  max-width: 1200px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(8, 7, 7, 0.45);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rowNosotros {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  width: 600px;
+}
+
+.h2nosotros {
+  color: #7e7e7b;
+  letter-spacing: 1rem;
+  font-family: initial;
+  padding-bottom: 1rem;
+  border-bottom: 3px double gray;
+}
+
+.pNosotros {
+  margin-top: 50px;
+  letter-spacing: 2px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #383837;
+}
+
+.imgNosotros {
+  height: 25rem;
+}
+
+/* SERVICIOS */
+
+.cardServicios {
+  margin: 1rem;
+  max-width: 1190px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(8, 7, 7, 0.45);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.displayS {
+  width: 600px;
+  text-align: center;
+}
+
+.titleServicios {
+  letter-spacing: 10px;
+  color: #757574;
+  padding-top: 12px;
+  font-family: inherit;
+  border-bottom: 3px double gray;
+  padding-bottom: 1rem;
+}
+
+.textServicios {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 2px;
+  color: rgb(68, 65, 65);
+}
+
+.imgS {
+  height: 17rem;
+
+  /* GALERIA */
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  justify-content: space-evenly;
+  transition: transform 500ms ease;
+}
+
+.cardGalery {
+  margin: 1rem;
+  max-width: 400px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(19, 17, 17, 0.45);
+}
+
+.cardGalery:hover,
+.cardGaleryfocus-within {
+  transform: scale(1.15);
+}
+
+.imgGalery {
+  height: 250px;
+  filter: drop-shadow(10px 10px 15px gray);
+}
+
+/* CONTACTO */
+
+.contacto {
+  margin: 1rem;
+  max-width: 1200px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(19, 17, 17, 0.45);
+}
+
+.cardContacto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.styleH2 {
+  font-family: initial;
+  letter-spacing: 5px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: #8d8d88;
+  border-bottom: 3px double rgb(124, 122, 122);
+}
+
+h3 {
+  font-family: initial;
+  font-weight: normal;
+  color: rgb(61, 40, 40);
+  padding: 5px;
+  padding-top: 1rem;
+}
+
+.informacion {
+  color: rgb(77, 72, 72);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+.informacion a {
+  text-decoration: none;
+  font-family: sans-serif;
+}
